@@ -1,0 +1,21 @@
+[
+  {
+    "slug": "hakodate-morning-market",
+    "name": "函館朝市",
+    "description": "新鮮な海産物が並ぶ観光名所。イカ釣り体験も人気！",
+    "address": "北海道函館市若松町9-19",
+    "hours": "6:00〜14:00",
+    "mapUrl": "https://maps.google.com/?q=函館朝市",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!2m3....", 
+    "image": "/images/hakodate-morning-market.jpg"
+  },
+  {
+    "slug": "motomachi-park",
+    "name": "元町公園",
+    "description": "洋風建築と坂道が美しい撮影スポット。",
+    "address": "北海道函館市元町12-18",
+    "hours": "常時開放",
+    "mapUrl": "https://maps.google.com/?q=元町公園",
+    "image": "/images/motomachi-park.jpg"
+  }
+]

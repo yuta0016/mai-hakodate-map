@@ -1,11 +1,20 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import locations from "../data/locations.json";
+import LocationCard from "../components/LocationCard.astro";
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>函館旅フォトブック 〜まいきゃっち!!〜</title>
+  </head>
+  <body class="bg-gray-100 p-6">
+    <h1 class="text-2xl font-bold mb-6 text-center">函館ロケ地一覧</h1>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {locations.map((loc) => (
+        <LocationCard location={loc} />
+      ))}
+    </div>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+[
+  {
+    "id": "hakodate-yama",
+    "name": "函館山展望台",
+    "address": "北海道函館市函館山",
+    "hours": "10:00〜22:00",
+    "access": "市電「十字街」からロープウェイで約3分",
+    "image": "/images/hakodate-yama.jpg",
+    "mapUrl": "https://goo.gl/maps/dn8wJjvVJ7E2"
+  },
+  {
+    "id": "kanemori",
+    "name": "金森赤レンガ倉庫",
+    "address": "北海道函館市末広町14-12",
+    "hours": "9:30〜19:00",
+    "access": "市電「十字街」電停から徒歩約5分",
+    "image": "/images/kanemori.jpg",
+    "mapUrl": "https://goo.gl/maps/F3pA7VJc7Yt"
+  }
+]
