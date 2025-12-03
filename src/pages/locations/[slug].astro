@@ -1,8 +1,16 @@
 ---
 import locations from "../../data/locations.json";
-const { slug } = Astro.params;
-const location = locations.find((l) => l.slug === slug);
-if (!location) throw new Error(`Location not found: ${slug}`);
+
+// SSG 化：全ページのビルド設定
+export function getStaticPaths() {
+  return locations.map((loc) => ({
+    params: { slug: loc.slug },
+    props: { location: loc },
+  }));
+}
+
+// ページ本体
+const { location } = Astro.props;
 ---
 
 <html lang="ja">
@@ -21,16 +29,14 @@ if (!location) throw new Error(`Location not found: ${slug}`);
         Googleマップで開く
       </a>
 
-      <!-- Google Maps Embed -->
       <div class="mt-6">
         <h2 class="text-lg font-semibold mb-2">Googleマップ</h2>
         <div class="w-full h-64 sm:h-80 rounded-xl overflow-hidden shadow">
           <iframe
             src={location.mapEmbedUrl}
             class="w-full h-full border-0"
-            allowfullscreen=""
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
           ></iframe>
         </div>
       </div>
