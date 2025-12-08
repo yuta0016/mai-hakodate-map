@@ -1,0 +1,142 @@
+---
+import spots from "../data/spots.json";
+---
+
+<div class="fixed top-0 left-0 z-50">
+  <button
+    id="hamburger-btn"
+    class="p-4 text-2xl bg-white rounded-br-lg shadow-md hover:bg-gray-100 transition"
+    aria-label="メニュー"
+  >
+    ☰
+  </button>
+</div>
+
+<nav
+  id="menu"
+  class="fixed top-0 left-0 h-screen w-64 bg-white shadow-lg transform -translate-x-full transition-transform duration-300 z-40 overflow-y-auto"
+>
+  <div class="p-6 pt-16">
+    <div class="mb-6">
+      <button
+        class="menu-toggle font-semibold text-lg flex items-center justify-between w-full p-3 rounded-lg hover:bg-gray-100 transition cursor-pointer"
+        data-target="spots-list"
+      >
+        <span>スッポット一覧</span>
+        <span class="toggle-icon">+</span>
+      </button>
+      <div
+        id="spots-list"
+        class="hidden mt-2 ml-4 border-l-2 border-blue-400"
+      >
+        {spots.map((spot) => (
+          <a
+            href={spot.mapUrl}
+            target="_blank"
+            class="block p-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded transition pl-4"
+          >
+            {spot.name}
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <div class="mb-6">
+      <button
+        class="menu-toggle font-semibold text-lg flex items-center justify-between w-full p-3 rounded-lg hover:bg-gray-100 transition cursor-pointer"
+        data-target="access-list"
+      >
+        <span>函館へのアクセス方法</span>
+        <span class="toggle-icon">+</span>
+      </button>
+      <div
+        id="access-list"
+        class="hidden mt-2 ml-4 border-l-2 border-blue-400 p-3 text-sm text-gray-700"
+      >
+        <p class="mb-3"><strong>飛行機:</strong> 函館空港から市街地まで車で約20分</p>
+        <p class="mb-3">
+          <strong>新幹線:</strong> 函館駅から市街地まで市電で約10分
+        </p>
+        <p><strong>車:</strong> 高速道路で東京から約1100km</p>
+      </div>
+    </div>
+
+    <div class="mb-6">
+      <button
+        class="menu-toggle font-semibold text-lg flex items-center justify-between w-full p-3 rounded-lg hover:bg-gray-100 transition cursor-pointer"
+        data-target="info-list"
+      >
+        <span>お得な情報</span>
+        <span class="toggle-icon">+</span>
+      </button>
+      <div
+        id="info-list"
+        class="hidden mt-2 ml-4 border-l-2 border-blue-400 p-3 text-sm text-gray-700"
+      >
+        <p class="mb-3">
+          <strong>函館朝市:</strong>
+          6:00〜14:00 営業。新鮮な海産物が豊富！
+        </p>
+        <p class="mb-3">
+          <strong>市電一日乗車券:</strong>
+          大人700円で市内の観光地を効率的に回れます
+        </p>
+        <p>
+          <strong>季節限定:</strong>
+          冬は夜景がより美しく見えます！
+        </p>
+      </div>
+    </div>
+
+    <button
+      id="close-menu"
+      class="mt-8 w-full p-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition"
+    >
+      メニューを閉じる
+    </button>
+  </div>
+</nav>
+
+<div
+  id="menu-overlay"
+  class="fixed inset-0 bg-black bg-opacity-50 hidden z-30"
+></div>
+
+<script>
+  const hamburgerBtn = document.getElementById("hamburger-btn");
+  const menu = document.getElementById("menu");
+  const overlay = document.getElementById("menu-overlay");
+  const closeBtn = document.getElementById("close-menu");
+  const menuToggles = document.querySelectorAll(".menu-toggle");
+
+  // メニュー開閉
+  hamburgerBtn?.addEventListener("click", () => {
+    menu?.classList.toggle("-translate-x-full");
+    overlay?.classList.toggle("hidden");
+  });
+
+  closeBtn?.addEventListener("click", () => {
+    menu?.classList.add("-translate-x-full");
+    overlay?.classList.add("hidden");
+  });
+
+  overlay?.addEventListener("click", () => {
+    menu?.classList.add("-translate-x-full");
+    overlay?.classList.add("hidden");
+  });
+
+  // サブメニュー開閉
+  menuToggles.forEach((toggle) => {
+    toggle.addEventListener("click", () => {
+      const targetId = toggle.getAttribute("data-target");
+      if (!targetId) return;
+      const targetElement = document.getElementById(targetId);
+      const icon = toggle.querySelector(".toggle-icon");
+
+      targetElement?.classList.toggle("hidden");
+      if (icon) {
+        icon.textContent = targetElement?.classList.contains("hidden") ? "+" : "−";
+      }
+    });
+  });
+</script>
