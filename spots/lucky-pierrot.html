@@ -85,18 +85,9 @@
     }
     .tweet {
       margin: 20px 0;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 15px;
-      background: #fafafa;
     }
-    .tweet-link {
-      color: #0066cc;
-      text-decoration: none;
-      font-size: 14px;
-    }
-    .tweet-link:hover {
-      text-decoration: underline;
+    .tweet iframe {
+      min-height: 500px;
     }
   </style>
 </head>
@@ -147,24 +138,19 @@
       <h2>🐦 関連ツイート</h2>
       <div class="tweets-section">
         <div class="tweet">
-          <a href="https://x.com/_m_aaii/status/1982769323656786009?s=20" target="_blank" rel="noopener noreferrer" class="tweet-link">
-            ツイートを表示 1
-          </a>
+          <blockquote class="twitter-tweet"><a href="https://x.com/_m_aaii/status/1982769323656786009?s=20"></a></blockquote>
         </div>
         <div class="tweet">
-          <a href="https://x.com/_m_aaii/status/1973357992268669258?s=20" target="_blank" rel="noopener noreferrer" class="tweet-link">
-            ツイートを表示 2
-          </a>
+          <blockquote class="twitter-tweet"><a href="https://x.com/_m_aaii/status/1973357992268669258?s=20"></a></blockquote>
         </div>
         <div class="tweet">
-          <a href="https://x.com/maipacemaiworld/status/1976603618120729047?s=20" target="_blank" rel="noopener noreferrer" class="tweet-link">
-            ツイートを表示 3
-          </a>
+          <blockquote class="twitter-tweet"><a href="https://x.com/maipacemaiworld/status/1976603618120729047?s=20"></a></blockquote>
         </div>
       </div>
     </div>
   </div>
 
   <script src="../js/menu-loader.js"></script>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </body>
 </html>
