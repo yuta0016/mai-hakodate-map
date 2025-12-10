@@ -1,6 +1,7 @@
 // menu-loader.js
 function generateMenu(homePath = 'index.html', spotsPath = 'spots/', isDetailPage = false) {
   const aboutPath = isDetailPage ? '../about.html' : 'about.html';
+  const contactPath = isDetailPage ? '../contact.html' : 'contact.html';
   const menuHTML = `
     <div class="header">
       <button class="hamburger" aria-label="メニュー" aria-controls="nav-menu" aria-expanded="false">
@@ -29,7 +30,7 @@ function generateMenu(homePath = 'index.html', spotsPath = 'spots/', isDetailPag
           </li>
           
           <li class="nav__item"><a href="#" class="nav__link">函館までのアクセス</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">お問い合わせ</a></li>
+          <li class="nav__item"><a href="${contactPath}" class="nav__link">お問い合わせ</a></li>
         </ul>
       </nav>
     </div>
