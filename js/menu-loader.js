@@ -34,8 +34,15 @@ function generateMenu(homePath = 'index.html', spotsPath = 'spots/') {
     </div>
   `;
 
-  // メニューを HTML に挿入
-  document.body.insertAdjacentHTML('afterbegin', menuHTML);
+  // メニューを body の最初に挿入（ただし head の後）
+  if (document.body.firstChild) {
+    document.body.insertBefore(
+      document.createRange().createContextualFragment(menuHTML),
+      document.body.firstChild
+    );
+  } else {
+    document.body.innerHTML = menuHTML + document.body.innerHTML;
+  }
   
   // メニュー機能を初期化
   initializeMenu();
