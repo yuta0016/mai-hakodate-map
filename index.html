@@ -3,47 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hamburger Menu</title>
-
-  <!-- CSS 読み込み -->
+  <title>函館スポット | 函館旅フォトブック</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-  <div class="header">
-    <button class="hamburger" aria-label="メニュー" aria-controls="nav-menu" aria-expanded="false">
-      <span class="hamburger__line"></span>
-      <span class="hamburger__line"></span>
-      <span class="hamburger__line"></span>
-    </button>
+  <!-- メニューはここに動的に読み込まれます -->
 
-    <nav id="nav-menu" class="nav" aria-hidden="true">
-      <ul class="nav__list">
-        <li class="nav__item"><a href="#" class="nav__link">ホーム</a></li>
-        <li class="nav__item"><a href="#" class="nav__link">about</a></li>
-        
-        <!-- スポット一覧（展開可能） -->
-        <li class="nav__item nav__item--expandable">
-          <button class="nav__link nav__link--toggle" data-target="spots-menu">
-            <span class="nav__link-text">スポット一覧</span>
-            <span class="nav__toggle-icon">+</span>
-          </button>
-          <ul class="nav__submenu" id="spots-menu">
-            <li class="nav__subitem"><a href="spots/onuma.html" class="nav__sublink">大沼国定公園</a></li>
-            <li class="nav__subitem"><a href="#" class="nav__sublink">スポット2</a></li>
-            <li class="nav__subitem"><a href="#" class="nav__sublink">スポット3</a></li>
-            <li class="nav__subitem"><a href="#" class="nav__sublink">スポット4</a></li>
-          </ul>
-        </li>
-        
-        <li class="nav__item"><a href="#" class="nav__link">函館までのアクセス</a></li>
-        <li class="nav__item"><a href="#" class="nav__link">お問い合わせ</a></li>
-      </ul>
-    </nav>
+  <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 40px 20px;">
+    <h1 style="text-align: center; font-size: 32px; margin-bottom: 40px;">函館ロケ地一覧</h1>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px;">
+      <!-- スポットカード -->
+      <a href="spots/onuma.html" style="text-decoration: none;">
+        <div style="background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s; cursor: pointer;">
+          <div style="height: 200px; background: #ddd; display: flex; align-items: center; justify-content: center; color: #999;">画像</div>
+          <div style="padding: 15px;">
+            <h3 style="margin: 0 0 10px; font-size: 18px; color: #333;">大沼国定公園</h3>
+            <p style="margin: 0; font-size: 14px; color: #666;">大自然に囲まれた美しい国定公園</p>
+          </div>
+        </div>
+      </a>
+      
+      <!-- 他のスポットは同様に追加 -->
+      <div style="background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+        <div style="height: 200px; background: #ddd; display: flex; align-items: center; justify-content: center; color: #999;">スポット2</div>
+        <div style="padding: 15px;">
+          <h3 style="margin: 0 0 10px; font-size: 18px; color: #333;">スポット2</h3>
+          <p style="margin: 0; font-size: 14px; color: #666;">準備中</p>
+        </div>
+      </div>
+
+      <div style="background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+        <div style="height: 200px; background: #ddd; display: flex; align-items: center; justify-content: center; color: #999;">スポット3</div>
+        <div style="padding: 15px;">
+          <h3 style="margin: 0 0 10px; font-size: 18px; color: #333;">スポット3</h3>
+          <p style="margin: 0; font-size: 14px; color: #666;">準備中</p>
+        </div>
+      </div>
+
+      <div style="background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+        <div style="height: 200px; background: #ddd; display: flex; align-items: center; justify-content: center; color: #999;">スポット4</div>
+        <div style="padding: 15px;">
+          <h3 style="margin: 0 0 10px; font-size: 18px; color: #333;">スポット4</h3>
+          <p style="margin: 0; font-size: 14px; color: #666;">準備中</p>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <!-- JS 読み込み（必ず body の最後へ） -->
-  <script src="js/script.js"></script>
+  <!-- メニューローダースクリプト -->
+  <script src="js/menu-loader.js"></script>
 </body>
 </html>
