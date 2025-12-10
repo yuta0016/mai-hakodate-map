@@ -24,7 +24,7 @@ function generateMenu(homePath = 'index.html', spotsPath = 'spots/', isDetailPag
             <ul class="nav__submenu" id="spots-menu">
               <li class="nav__subitem"><a href="${spotsPath}onuma.html" class="nav__sublink">大沼国定公園</a></li>
               <li class="nav__subitem"><a href="${spotsPath}lucky-pierrot.html" class="nav__sublink">ラッキーピエロ ベイエリア本店</a></li>
-              <li class="nav__subitem"><a href="#" class="nav__sublink">スポット3</a></li>
+              <li class="nav__subitem"><a href="${spotsPath}romantico-romantica.html" class="nav__sublink">ROMANTiCO ROMANTiCA</a></li>
               <li class="nav__subitem"><a href="#" class="nav__sublink">スポット4</a></li>
             </ul>
           </li>
