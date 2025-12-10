@@ -1,5 +1,6 @@
 // menu-loader.js
-function generateMenu(homePath = 'index.html', spotsPath = 'spots/') {
+function generateMenu(homePath = 'index.html', spotsPath = 'spots/', isDetailPage = false) {
+  const aboutPath = isDetailPage ? '../about.html' : 'about.html';
   const menuHTML = `
     <div class="header">
       <button class="hamburger" aria-label="メニュー" aria-controls="nav-menu" aria-expanded="false">
@@ -11,7 +12,7 @@ function generateMenu(homePath = 'index.html', spotsPath = 'spots/') {
       <nav id="nav-menu" class="nav" aria-hidden="true">
         <ul class="nav__list">
           <li class="nav__item"><a href="${homePath}" class="nav__link">ホーム</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">about</a></li>
+          <li class="nav__item"><a href="${aboutPath}" class="nav__link">about</a></li>
           
           <!-- スポット一覧（展開可能） -->
           <li class="nav__item nav__item--expandable">
@@ -99,6 +100,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const homePath = isDetailPage ? '../index.html' : 'index.html';
   const spotsPath = isDetailPage ? '' : 'spots/';
   
-  generateMenu(homePath, spotsPath);
+  generateMenu(homePath, spotsPath, isDetailPage);
 });
 
