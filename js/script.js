@@ -22,4 +22,20 @@ document.addEventListener('DOMContentLoaded', () => {
       nav.setAttribute('aria-hidden', true);
     }
   });
+
+  // サブメニューの展開/折りたたみ
+  const toggleButtons = document.querySelectorAll('.nav__link--toggle');
+  toggleButtons.forEach(button => {
+    button.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetId = button.getAttribute('data-target');
+      const submenu = document.getElementById(targetId);
+
+      // ボタンのアクティブ状態を切り替え
+      button.classList.toggle('active');
+
+      // サブメニューのアクティブ状態を切り替え
+      submenu.classList.toggle('active');
+    });
+  });
 });

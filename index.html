@@ -22,7 +22,21 @@
       <ul class="nav__list">
         <li class="nav__item"><a href="#" class="nav__link">ホーム</a></li>
         <li class="nav__item"><a href="#" class="nav__link">about</a></li>
-        <li class="nav__item"><a href="#" class="nav__link">スポット一覧</a></li>
+        
+        <!-- スポット一覧（展開可能） -->
+        <li class="nav__item nav__item--expandable">
+          <button class="nav__link nav__link--toggle" data-target="spots-menu">
+            <span class="nav__link-text">スポット一覧</span>
+            <span class="nav__toggle-icon">+</span>
+          </button>
+          <ul class="nav__submenu" id="spots-menu">
+            <li class="nav__subitem"><a href="#" class="nav__sublink">スポット1</a></li>
+            <li class="nav__subitem"><a href="#" class="nav__sublink">スポット2</a></li>
+            <li class="nav__subitem"><a href="#" class="nav__sublink">スポット3</a></li>
+            <li class="nav__subitem"><a href="#" class="nav__sublink">スポット4</a></li>
+          </ul>
+        </li>
+        
         <li class="nav__item"><a href="#" class="nav__link">函館までのアクセス</a></li>
         <li class="nav__item"><a href="#" class="nav__link">お問い合わせ</a></li>
       </ul>
