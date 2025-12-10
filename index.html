@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hamburger Menu</title>
+
+  <!-- CSS 読み込み -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <div class="header">
+    <button class="hamburger" aria-label="メニュー" aria-controls="nav-menu" aria-expanded="false">
+      <span class="hamburger__line"></span>
+      <span class="hamburger__line"></span>
+      <span class="hamburger__line"></span>
+    </button>
+
+    <nav id="nav-menu" class="nav" aria-hidden="true">
+      <ul class="nav__list">
+        <li class="nav__item"><a href="#" class="nav__link">ホーム</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">about</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">スポット一覧</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">函館までのアクセス</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- JS 読み込み（必ず body の最後へ） -->
+  <script src="js/script.js"></script>
+</body>
+</html>
