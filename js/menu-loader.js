@@ -8,6 +8,7 @@ function generateMenu(homePath = 'index.html', spotsPath = 'spots/', isDetailPag
         <span class="hamburger__line"></span>
         <span class="hamburger__line"></span>
         <span class="hamburger__line"></span>
+        <span class="hamburger__label">MENU</span>
       </button>
 
       <nav id="nav-menu" class="nav" aria-hidden="true">
