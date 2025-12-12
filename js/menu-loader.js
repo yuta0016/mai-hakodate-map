@@ -34,7 +34,7 @@ function generateMenu(homePath = 'index.html', spotsPath = 'spots/', isDetailPag
             </ul>
           </li>
           
-          <li class="nav__item"><a href="#" class="nav__link">函館までのアクセス</a></li>
+          <li class="nav__item"><a href="${isDetailPage ? '../access.html' : 'access.html'}" class="nav__link">函館までのアクセス</a></li>
           <li class="nav__item"><a href="${contactPath}" class="nav__link">お問い合わせ</a></li>
         </ul>
       </nav>
