@@ -26,9 +26,9 @@ function generateMenu(homePath = 'index.html', spotsPath = 'spots/', isDetailPag
               <li class="nav__subitem"><a href="${spotsPath}onuma.html" class="nav__sublink">大沼国定公園</a></li>
               <li class="nav__subitem"><a href="${spotsPath}lucky-pierrot.html" class="nav__sublink">ラッキーピエロ ベイエリア本店</a></li>
               <li class="nav__subitem"><a href="${spotsPath}romantico-romantica.html" class="nav__sublink">ROMANTiCO ROMANTiCA</a></li>
-              <li class="nav__subitem"><a href="${spotsPath}hakodate-bierhall.html" class="nav__sublink">函館ビアホール</a></li>
+              <li class="nav__subitem"><a href="${spotsPath}hakodate-bierhall.html" class="nav__sublink">函館ビヤホール</a></li>
               <li class="nav__subitem"><a href="${spotsPath}hachiman-zaka.html" class="nav__sublink">八幡坂</a></li>
-              <li class="nav__subitem"><a href="${spotsPath}hakodate-romankan.html" class="nav__sublink">函館浪漫感</a></li>
+              <li class="nav__subitem"><a href="${spotsPath}hakodate-romankan.html" class="nav__sublink">函館浪漫館</a></li>
               <li class="nav__subitem"><a href="${spotsPath}hakodate-asaichi.html" class="nav__sublink">函館朝市ひろば</a></li>
               <li class="nav__subitem"><a href="${spotsPath}kaisenndokoro-hakodateyama.html" class="nav__sublink">海鮮処 函館山</a></li>
             </ul>
