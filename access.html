@@ -112,6 +112,37 @@
       color: #555;
       line-height: 1.6;
     }
+    .toc-section {
+      background: linear-gradient(to right, #f0f8ff, #fffacd);
+      border: 2px solid #ff69b4;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 30px 0 40px;
+    }
+    .toc-section h2 {
+      margin-top: 0;
+      border: none;
+      padding: 0;
+      color: #ff69b4;
+    }
+    .toc-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 15px 0 0;
+    }
+    .toc-section li {
+      margin: 10px 0;
+    }
+    .toc-section a {
+      color: #0066cc;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .toc-section a:hover {
+      color: #ff69b4;
+      text-decoration: underline;
+    }
   </style>
 </head>
 
@@ -127,9 +158,22 @@
       日本五大都市から函館への交通手段別アクセス情報をまとめました。最適な交通手段をお選びください。
     </p>
 
+    <!-- 目次 -->
+    <div class="toc-section">
+      <h2>📑 目次</h2>
+      <ul>
+        <li><a href="#tokyo">🗼 東京から函館へ</a></li>
+        <li><a href="#osaka">🏯 大阪から函館へ</a></li>
+        <li><a href="#nagoya">🏯 名古屋から函館へ</a></li>
+        <li><a href="#fukuoka">⛩️ 福岡から函館へ</a></li>
+        <li><a href="#sapporo">🏔️ 札幌から函館へ</a></li>
+        <li><a href="#seasons">📌 季節による注意点</a></li>
+      </ul>
+    </div>
+
     <!-- 東京 -->
     <div class="city-section">
-      <h2>🗼 東京から函館へ</h2>
+      <h2 id="tokyo">🗼 東京から函館へ</h2>
       
       <div class="access-card">
         <h3>✈️ 飛行機（最速）</h3>
@@ -202,7 +246,7 @@
 
     <!-- 大阪 -->
     <div class="city-section">
-      <h2>🏯 大阪から函館へ</h2>
+      <h2 id="osaka">🏯 大阪から函館へ</h2>
       
       <div class="access-card">
         <h3>✈️ 飛行機（最速）</h3>
@@ -271,7 +315,7 @@
 
     <!-- 名古屋 -->
     <div class="city-section">
-      <h2>🏯 名古屋から函館へ</h2>
+      <h2 id="nagoya">🏯 名古屋から函館へ</h2>
       
       <div class="access-card">
         <h3>✈️ 飛行機（最速）</h3>
@@ -340,7 +384,7 @@
 
     <!-- 福岡 -->
     <div class="city-section">
-      <h2>⛩️ 福岡から函館へ</h2>
+      <h2 id="fukuoka">⛩️ 福岡から函館へ</h2>
       
       <div class="access-card">
         <h3>✈️ 飛行機（最速）</h3>
@@ -409,7 +453,7 @@
 
     <!-- 札幌 -->
     <div class="city-section">
-      <h2>🏔️ 札幌から函館へ</h2>
+      <h2 id="sapporo">🏔️ 札幌から函館へ</h2>
       
       <div class="access-card">
         <h3>🚅 在来線（最速）</h3>
@@ -494,7 +538,7 @@
 
     <!-- 季節による注意点 -->
     <div class="note-section">
-      <h2>📌 季節による注意点</h2>
+      <h2 id="seasons">📌 季節による注意点</h2>
       
       <div class="season-item">
         <h3>❄️ 冬季（11月〜3月）</h3>
