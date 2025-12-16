@@ -14,7 +14,7 @@ function generateMenu(homePath = 'index.html', spotsPath = 'spots/', isDetailPag
       <nav id="nav-menu" class="nav" aria-hidden="true">
         <ul class="nav__list">
           <li class="nav__item"><a href="${homePath}" class="nav__link">ホーム</a></li>
-          <li class="nav__item"><a href="${aboutPath}" class="nav__link">about</a></li>
+          <li class="nav__item"><a href="${aboutPath}" class="nav__link">このサイトについて</a></li>
           
           <!-- スポット一覧（展開可能） -->
           <li class="nav__item nav__item--expandable">
