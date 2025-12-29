@@ -33,6 +33,7 @@ function generateMenu(homePath = 'index.html', spotsPath = 'spots/', isDetailPag
               <li class="nav__subitem"><a href="${spotsPath}kaisenndokoro-hakodateyama.html" class="nav__sublink">海鮮処 函館山</a></li>
               <li class="nav__subitem"><a href="${spotsPath}motomachi-glass.html" class="nav__sublink">元町ガラス工房</a></li>
               <li class="nav__subitem"><a href="${spotsPath}ravista-hakodate.html" class="nav__sublink">ラビスタ函館ベイ</a></li>
+              <li class="nav__subitem"><a href="${spotsPath}angelique-voyage.html" class="nav__sublink">アンジェリック・ヴォヤージュ</a></li>
             </ul>
           </li>
           
