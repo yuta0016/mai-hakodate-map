@@ -50,7 +50,10 @@ mai-hakodate-map/
 │   ├── hachiman-zaka.html
 │   ├── hakodate-romankan.html
 │   ├── hakodate-asaichi.html
-│   └── kaisenndokoro-hakodateyama.html
+│   ├── kaisenndokoro-hakodateyama.html
+│   ├── motomachi-glass.html
+│   ├── ravista-hakodate.html
+│   └── angelique-voyage.html
 ├── robots.txt                 # SEO設定
 ├── sitemap.xml                # サイトマップ
 └── README.md                  # このファイル
