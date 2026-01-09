@@ -1,4 +1,5 @@
 // menu-loader.js
+// Last updated: 2026-01-09 13:00
 function generateMenu(homePath = 'index.html', spotsPath = 'spots/', isDetailPage = false) {
   const aboutPath = isDetailPage ? '../about.html' : 'about.html';
   const contactPath = isDetailPage ? '../contact.html' : 'contact.html';
