@@ -108,11 +108,14 @@ function initializeMenu() {
 
 // DOMContentLoaded 時にメニューを生成
 document.addEventListener('DOMContentLoaded', () => {
+  console.log('Menu loader started');
   // ホームページと詳細ページで異なるパスを設定
   const isDetailPage = window.location.pathname.includes('/spots/');
   const homePath = isDetailPage ? '../index.html' : 'index.html';
   const spotsPath = isDetailPage ? '' : 'spots/';
   
+  console.log('Generating menu with spotsPath:', spotsPath);
   generateMenu(homePath, spotsPath, isDetailPage);
+  console.log('Menu generated');
 });
 
